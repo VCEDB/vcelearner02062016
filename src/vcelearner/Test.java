@@ -1,5 +1,8 @@
 package vcelearner;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Date;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,6 +15,14 @@ import java.util.ArrayList;
  */
 public class Test {
 
+    //Date datum = new Date();
+    //SimpleDateFormat datumsformat = new SimpleDateFormat
+    //    ("yyyy-MM-dd HH:mm:ss");
+    
+    //public Date getDatum() {
+    //    return datum;
+    //}
+    
     public static void main(String[] args) {
         
 ////       //Testen Lernkarte§Themenbereich
@@ -87,5 +98,12 @@ public class Test {
 //    System.out.println(lS2lK.toString());
 //    System.out.println(lS2pA.toString());
 //    System.out.println(lS2pA1.toString());
+        
+        LernSitzung ls = new LernSitzung("ungewertet", 1);
+        //LernSitzung.insert(ls);
+        
+        //Benutzer benutzer = new Benutzer(3, "klassenclown", "blabla", "Steffen", "Lehmann");
+        ArrayList<LernSitzung> lSs = LernSitzung.getAll();
+        System.out.println(lSs.toString());
     }
 }

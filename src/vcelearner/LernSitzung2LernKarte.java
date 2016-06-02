@@ -52,7 +52,7 @@ public class LernSitzung2LernKarte {
             pst = con.prepareStatement(Sql);
             pst.setInt(1, lS2lK.getLernSitzung_id());
             pst.setInt(2, lS2lK.getLernkarte_id());
-            pst.setString(3, "" + lS2lK.isGemogelt());
+            pst.setString(3, String.valueOf(lS2lK.isGemogelt()));
             pst.executeUpdate();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -82,7 +82,8 @@ public class LernSitzung2LernKarte {
             while (rst.next()) {
                 LernSitzung2LernKarte lS2lK = new LernSitzung2LernKarte(
                         rst.getInt("lernsitzung_id"),
-                        rst.getInt("lernkarte_id"), rst.getBoolean("gemogelt"));
+                        rst.getInt("lernkarte_id"), Boolean.parseBoolean(
+                                rst.getString("gemogelt")));
                 lS2lKs.add(lS2lK);
             }
         } catch (SQLException ex) {

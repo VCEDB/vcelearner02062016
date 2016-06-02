@@ -65,7 +65,8 @@ public class LernSitzung {
             // VERBINDUNG AUFBBAUEN:
             Connection con = MySQLConnection.getConnection();
             // STATEMENT
-            String Sql = "INSERT INTO lernsitzung VALUES (null, ?, CURRENT_TIMESTAMP, ?)";
+            String Sql = "INSERT INTO lernsitzung VALUES (null, ?, "
+                    + "CURRENT_TIMESTAMP, ?)";
             pst = con.prepareStatement(Sql,
                     PreparedStatement.RETURN_GENERATED_KEYS);
             pst.setString(1, "" + lS.getTyp());

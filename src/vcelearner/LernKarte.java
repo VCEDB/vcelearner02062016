@@ -1,7 +1,6 @@
 package vcelearner;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -277,10 +276,6 @@ public class LernKarte {
         }
 
     }
-//    @Override
-//    public String toString() {
-//        return "LernKarte{" + "id=" + id + ", frage=" + frage + ", schwierigkeitsGrad=" + schwierigkeitsGrad + ", tBs=" + tBs + ", pAs=" + pAs + '}';
-//    }
 
     @Override
     public String toString() {

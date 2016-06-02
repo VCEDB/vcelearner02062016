@@ -21,6 +21,15 @@ public class SitzungsLernKarte {
         this.lK=lK;
     }
 
+    public SitzungsLernKarte(LernKarte lK, ArrayList<PotentielleAntwort> gegebeneAntworten, boolean wiederVorlage, boolean gemogelt) {
+        this.lK = lK;
+        this.gegebeneAntworten = gegebeneAntworten;
+        this.wiederVorlage = wiederVorlage;
+        this.gemogelt = gemogelt;
+    }
+    
+    
+
     public ArrayList<PotentielleAntwort> getGegebeneAntworten() {
         return gegebeneAntworten;
     }
@@ -47,6 +56,11 @@ public class SitzungsLernKarte {
 
     public LernKarte getlK() {
         return lK;
+    }
+
+    @Override
+    public String toString() {
+        return "\n\nSitzungsLernKarte{" + "lK=" + lK + ", gegebeneAntworten=" + gegebeneAntworten + ", wiederVorlage=" + wiederVorlage + ", gemogelt=" + gemogelt + '}';
     }
     
     
